@@ -37,7 +37,7 @@ p {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: var(--outer-space);
-    border-bottom: 10px solid var(--outer-space);
+    border-bottom: 10px solid var(--forest);
 }
 
 #header h1 {
@@ -62,7 +62,6 @@ p {
 /* Main Image */
 .main-image {
     height: 700px;
-    width: 100%;
     background-image: url("./images/bwrock.jpg");
     background-size: cover;
     background-position: center;
@@ -76,10 +75,10 @@ p {
 .main-image h2{
     color: white;
     font-weight: bold;
-    font-size: 100px;
     font-family: Arial, Helvetica, sans-serif;
     border: solid 12px white;
     position: relative;
+    font-size: 100px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -155,7 +154,7 @@ p {
 }
 
 /* Projects */
-/* create our main grid with flexbox, use negative margins to offset the padding on the .card-column class */
+/* Header for projects section */
 #projects-header {
   color: var(--outer-space);
   font-weight: bold;
@@ -168,6 +167,7 @@ p {
   margin: auto;
 }
 
+/* Styling of first project */
 .big-card-column{
   flex: 1 0 100%;
   padding: 1.5rem;
@@ -194,34 +194,34 @@ p {
 
 }
 .big-card .card-header {
-  /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
-    position: relative;
-    margin: -6rem 0 1.5rem 0;
-    padding: 0.5rem 1rem;
-    color: var(--heliotrope);
-    border: 2px solid var(--gin);
-    transition: all 0.5s ease-in-out;
-    font-family: 'Courier New';
-    border-bottom: solid 2px rgb(134, 134, 134);
+  position: relative;
+  margin: -6rem 0 1.5rem 0;
+  padding: 0.5rem 1rem;
+  color: var(--heliotrope);
+  border: 2px solid var(--gin);
+  transition: all 0.5s ease-in-out;
+  font-family: 'Courier New';
+  border-bottom: solid 2px rgb(134, 134, 134);
 }
+
 .projects {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-    margin-top: 55px;
-    justify-content: center;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* margin-left: -1.5rem;
+  margin-right: -1.5rem; */
+  margin-top: 55px;
+  justify-content: center;
+}
   
   /* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
-  .card-column {
-    flex: 1 0 100%;
-    padding: 1.5rem;
-    /* when the screen resizes, make it so our columns don't jump in size */
-    transition: flex-basis 500ms linear;
-    margin-bottom: 1.5rem;
-  }
+.card-column {
+  flex: 1 0 100%;
+  padding: 1.5rem;
+  /* when the screen resizes, make it so our columns don't jump in size */
+  transition: flex-basis 500ms linear;
+  margin-bottom: 1.5rem;
+}
   
   /* make each code card a flexbox column to align and justify content within it */
   .code-card {
@@ -232,22 +232,37 @@ p {
     padding: 2rem;
     color: var(--heliotrope);
     height: 300px;
-    background-image: url("./images/me_dark.jpg");
+    border-radius: 25px;
+  }
+
+  /* Setting background images for projects */
+  .rps{
+    background-image: url("./images/rps.png");
     background-size: cover;
     background-position: center;
-    border-radius: 25px;
+  }
+
+  .type{
+    background-image: url("./images/typography.JPG");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .firstWeb{
+    background-image: url("./images/firstWeb.JPG");
+    background-size: cover;
+    background-position: center;
   }
   
   .code-card .card-header {
-    /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
     position: relative;
     margin: -6rem 0 1.5rem 0;
     padding: 0.5rem 1rem;
     color: var(--heliotrope);
     border: 2px solid var(--gin);
-    border-radius: 8px;
     transition: all 0.5s ease-in-out;
     font-family: 'Courier New';
+    border-bottom: solid 2px rgb(134, 134, 134);
   }
 
   /* set an outer and inner drop shadow on the card to create a glowing effect on hover */
@@ -266,15 +281,15 @@ p {
 
 /* CONTACT ME SECTION */
 #contact-me {
-  background-color: var(--forest);
+  background-color: var(--dark-background);
   height: 350px;
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
+  /* margin-left: -1.5rem;
+  margin-right: -1.5rem; */
   position: relative;
+  margin-top: 35px;
 }
 
 #contact-me h2 {
@@ -313,8 +328,8 @@ p {
 footer{
   text-align: center;
   padding: 10px;
-  background-color: rgb(25, 25, 25);
-  color: white;
+  background-color: white;
+  color: var(--outer-space);
 }
 /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
 @media screen and (min-width: 768px) {
