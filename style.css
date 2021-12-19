@@ -1,0 +1,345 @@
+ /* Color Scheme */
+:root {
+    --wood-brown: rgb(44, 32, 14);
+    --outer-space: #0e0e0e;
+    --forest: #212b25;
+    --dark-background: rgb(25, 25, 25);
+  }
+
+/* set content highlight color and background */
+::selection {
+    background-color: var(--bright-turquoise);
+    color: var(--outer-space);
+  }  
+
+/* Standard Page Style*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+a {
+    color: var(--outer-space);
+    text-decoration: none;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Heading and Nav Bar */
+#header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--outer-space);
+    border-bottom: 10px solid var(--outer-space);
+}
+
+#header h1 {
+    display: inline-block;
+    font-size: 48px;
+    
+}
+
+#header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#header li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+/* Main Image */
+.main-image {
+    height: 700px;
+    width: 100%;
+    background-image: url("./images/bwrock.jpg");
+    background-size: cover;
+    background-position: center;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-image h2{
+    color: white;
+    font-weight: bold;
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid 12px white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main Content */
+/* About me */
+#about-me{
+  background-color: rgb(25, 25, 25);
+  height: 400px;
+  margin-bottom: 75px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: -.2rem;
+  margin-right: -.2rem;
+  align-items: center;
+}
+
+.am-row{
+  flex: 1 0 100%;
+  /* when the screen resizes, make it so our columns don't jump in size */
+  transition: flex-basis 500ms linear;
+  margin-bottom: 1.5rem;
+}
+
+#about-me h2 {
+  color: white;
+  font-weight: bold;
+  font-size: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: solid 12px white;
+  width: 375px;
+  height: 300px;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+  top: 50px;
+  margin-left: 20px;
+}
+
+#about-me #hello {
+  color:white;
+  background-color:  rgb(25, 25, 25);
+  width: 300px;
+  font-size: 20px;
+  position: relative;
+  top: 70px;
+}
+
+#me-photo{
+  height: 400px;
+  width: 400px;
+}
+
+#about-me p {
+  color: var(--outer-space);
+  margin: 20px;
+  font-family: 'Courier New';
+  font-size: 25px;
+  background-color: wheat;
+  font: weight 300px;;
+  padding: 5px;
+  width: 500px;
+  position: relative;
+  top: 50px;
+  
+}
+
+/* Projects */
+/* create our main grid with flexbox, use negative margins to offset the padding on the .card-column class */
+#projects-header {
+  color: var(--outer-space);
+  font-weight: bold;
+  font-size: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: solid 12px var(--outer-space);
+  width: 500px;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+}
+
+.big-card-column{
+  flex: 1 0 100%;
+  padding: 1.5rem;
+  /* when the screen resizes, make it so our columns don't jump in size */
+  transition: flex-basis 500ms linear;
+  margin-bottom: 1.5rem;
+}
+
+.big-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100%;
+  padding: 2rem;
+  height: 700px;
+  width: 90%;
+  background-image: url("./images/css_snippet_cheat.jpg");
+  background-size: cover;
+  background-position:top;
+  border-radius: 25px;
+  margin:auto;
+  margin-top: 75px;
+  margin-bottom: 35px;
+
+}
+.big-card .card-header {
+  /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
+    position: relative;
+    margin: -6rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    color: var(--heliotrope);
+    border: 2px solid var(--gin);
+    transition: all 0.5s ease-in-out;
+    font-family: 'Courier New';
+    border-bottom: solid 2px rgb(134, 134, 134);
+}
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    margin-top: 55px;
+    justify-content: center;
+  }
+  
+  /* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
+  .card-column {
+    flex: 1 0 100%;
+    padding: 1.5rem;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* make each code card a flexbox column to align and justify content within it */
+  .code-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 2rem;
+    color: var(--heliotrope);
+    height: 300px;
+    background-image: url("./images/me_dark.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+  }
+  
+  .code-card .card-header {
+    /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
+    position: relative;
+    margin: -6rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    color: var(--heliotrope);
+    border: 2px solid var(--gin);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+    font-family: 'Courier New';
+  }
+
+  /* set an outer and inner drop shadow on the card to create a glowing effect on hover */
+.code-card:hover {
+  box-shadow: 10px 10px 15px var(--forest);
+  cursor: pointer;
+}
+.big-card:hover {
+  box-shadow: 10px 10px 15px var(--forest);
+  cursor: pointer;
+}
+/* each card's code block grows to the height of the largest code block on the page, making each card even in height */
+.code-card .code-block {
+  flex-grow: 1;
+}
+
+/* CONTACT ME SECTION */
+#contact-me {
+  background-color: var(--forest);
+  height: 350px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  position: relative;
+}
+
+#contact-me h2 {
+  color: white;
+  font-weight: bold;
+  font-size: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: solid 12px white;
+  position: relative;
+  top: 50%;
+  left: 13%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 450px;
+  height: 250px;
+  padding: 20px;
+  text-align: left;
+}
+
+#contact-me p {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  left: 100%;
+  top: 10%;
+}
+
+#contact-me a{
+  color: wheat;
+}
+
+footer{
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(25, 25, 25);
+  color: white;
+}
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 768px) {
+  /* on tablets, set columns to only be 50% of the width and not grow */
+  .card-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+
+  /* select the last child to grow to full width if it has space to grow */
+  .card-column:last-child {
+    flex-grow: 1;
+  }
+}
+
+/* media query for larger screens */
+@media screen and (min-width: 992px) {
+  header {
+    width: 75%;
+  }
+
+  .card-column {
+    flex: 0 0 33.333%;
+    max-width: 30%;
+  }
+
+}
