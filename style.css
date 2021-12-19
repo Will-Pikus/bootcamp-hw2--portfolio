@@ -4,11 +4,11 @@
     --outer-space: #0e0e0e;
     --forest: #212b25;
     --dark-background: rgb(25, 25, 25);
+    --blood-orange:rgb(255, 94, 0) ;
   }
 
 /* set content highlight color and background */
 ::selection {
-    background-color: var(--bright-turquoise);
     color: var(--outer-space);
   }  
 
@@ -37,12 +37,13 @@ p {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: var(--outer-space);
-    border-bottom: 10px solid var(--forest);
+    border-bottom: 10px solid var(--dark-background);
 }
 
 #header h1 {
     display: inline-block;
     font-size: 48px;
+    margin-left: 20px;
     
 }
 
@@ -56,7 +57,8 @@ p {
 
 #header li {
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 30px;
+    margin-right: 5px;
 }
 
 /* Main Image */
@@ -73,7 +75,7 @@ p {
 }
 
 .main-image h2{
-    color: white;
+    color: var(--blood-orange);
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     border: solid 12px white;
@@ -91,7 +93,7 @@ p {
 /* Main Content */
 /* About me */
 #about-me{
-  background-color: rgb(25, 25, 25);
+  background-color: var(--dark-background);
   height: 400px;
   margin-bottom: 75px;
   width: 100%;
@@ -108,6 +110,9 @@ p {
   /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
   margin-bottom: 1.5rem;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start; */
 }
 
 #about-me h2 {
@@ -127,7 +132,7 @@ p {
 
 #about-me #hello {
   color:white;
-  background-color:  rgb(25, 25, 25);
+  background-color:  var(--dark-background);
   width: 300px;
   font-size: 20px;
   position: relative;
@@ -202,14 +207,14 @@ p {
   transition: all 0.5s ease-in-out;
   font-family: 'Courier New';
   border-bottom: solid 2px rgb(134, 134, 134);
+  /* border-bottom: solid 2px var(--blood-orange); */
 }
 
+/* Smaller projects */
 .projects {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  /* margin-left: -1.5rem;
-  margin-right: -1.5rem; */
   margin-top: 55px;
   justify-content: center;
 }
@@ -254,6 +259,7 @@ p {
     background-position: center;
   }
   
+  /* Header for cards */
   .code-card .card-header {
     position: relative;
     margin: -6rem 0 1.5rem 0;
@@ -263,6 +269,7 @@ p {
     transition: all 0.5s ease-in-out;
     font-family: 'Courier New';
     border-bottom: solid 2px rgb(134, 134, 134);
+    /* border-bottom: solid 2px var(--blood-orange); */
   }
 
   /* set an outer and inner drop shadow on the card to create a glowing effect on hover */
@@ -286,10 +293,9 @@ p {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  /* margin-left: -1.5rem;
-  margin-right: -1.5rem; */
   position: relative;
-  margin-top: 35px;
+  margin-top: 45px;
+  border-bottom: 10px solid var(--blood-orange);
 }
 
 #contact-me h2 {
@@ -298,31 +304,36 @@ p {
   font-size: 80px;
   font-family: Arial, Helvetica, sans-serif;
   border: solid 12px white;
-  position: relative;
-  top: 50%;
-  left: 13%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
   width: 450px;
   height: 250px;
   padding: 20px;
+  margin-top: 50px;
+  margin-left: 50px;
+  text-align: left;
+}
+
+#contact-info{
+  margin-left: 5%;
+  height: 250px;
+  margin-top: 34px;
   text-align: left;
 }
 
 #contact-me p {
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   padding: 20px;
-  text-align: center;
-  position: relative;
-  left: 100%;
-  top: 10%;
+  text-align: left;
 }
 
 #contact-me a{
-  color: wheat;
+  color: var(--outer-space);
+  background-color: rgb(168, 168, 168);
+  border-radius: 10px;
+  padding: 7px;
+  margin-top: 10px;
 }
 
 footer{
@@ -339,11 +350,21 @@ footer{
     max-width: 50%;
   }
 
+  /* .am-row {
+    flex: 0 0 50%;
+    max-width: 50%;
+  } */
+
 
   /* select the last child to grow to full width if it has space to grow */
   .card-column:last-child {
     flex-grow: 1;
   }
+
+  /* .am-row:last-child {
+    flex-grow: 1;
+  } */
+
 }
 
 /* media query for larger screens */
@@ -356,5 +377,12 @@ footer{
     flex: 0 0 33.333%;
     max-width: 30%;
   }
+
+  /* .am-row {
+    flex: 0 0 25%;
+    max-width: 20%;
+  } */
+
+  
 
 }
