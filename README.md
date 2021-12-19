@@ -15,6 +15,6 @@ The site is structured as follows:
 Note* I am currently unable to get my "about me" section to wrap and siplay appropriate sizing when the browser window is changed. Due to time constraint I will be unable to fix this by 12/18. I plan to fix this by next class session 12/21.
 
 ### Screenshot
-![Webpage Screenshot](images/portfolio.jpg)
+![Webpage Screenshot](/images/portfolio.JPG)
 ### Site Link:
 https://will-pikus.github.io/bootcamp-hw2-portfolio/
