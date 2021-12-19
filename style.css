@@ -1,107 +1,108 @@
- /* Color Scheme */
-:root {
+ /* ############################# VARIABLES ################################*/
+
+ :root {
+    /* Color Scheme */
     --wood-brown: rgb(44, 32, 14);
     --outer-space: #0e0e0e;
     --forest: #212b25;
     --dark-background: rgb(25, 25, 25);
     --blood-orange:rgb(255, 94, 0) ;
+    --stone-grey:rgb(175, 175, 175);
+    /* Font Scheme */
   }
 
-/* set content highlight color and background */
-::selection {
-    color: var(--outer-space);
-  }  
+/* ############################# STANDARD PAGE STYLE ################################*/
 
-/* Standard Page Style*/
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 a {
-    color: var(--outer-space);
-    text-decoration: none;
+  color: var(--outer-space);
+  text-decoration: none;
 }
 
 p {
-    font-size: 16px;
+  font-size: 16px;
 }
 
-/* Heading and Nav Bar */
+/* ############################# HEADER & NAV BAR ################################*/
+
 #header {
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: var(--outer-space);
-    border-bottom: 10px solid var(--dark-background);
+  padding: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--outer-space);
+  border-bottom: 10px solid var(--stone-grey);
 }
 
 #header h1 {
-    display: inline-block;
-    font-size: 48px;
-    margin-left: 20px;
-    
+  display: inline-block;
+  font-size: 48px;
+  margin-left: 10px;
 }
 
 #header nav {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-family: 'Courier New';
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 5px;
 }
 
 #header li {
-    display: inline-block;
-    margin-left: 30px;
-    margin-right: 5px;
+  display: inline-block;
+  margin-left: 30px;
+  margin-right: 5px;
 }
 
-/* Main Image */
+/* ############################# HEADER IMAGE #########################################*/
 .main-image {
-    height: 700px;
-    background-image: url("./images/bwrock.jpg");
-    background-size: cover;
-    background-position: center;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 700px;
+  background-image: url("./images/bwrock.jpg");
+  background-size: cover;
+  background-position: center;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .main-image h2{
-    color: var(--blood-orange);
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    border: solid 12px white;
-    position: relative;
-    font-size: 100px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 400px;
-    padding: 20px;
-    text-align: center;
+  color: var(--blood-orange);
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  border: solid 12px white;
+  position: relative;
+  font-size: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 400px;
+  padding: 20px;
+  text-align: center;
 }
 
-/* Main Content */
-/* About me */
+                                 /* Main Content */
+/* ############################# ABOUT ME SECTION ################################*/
+
 #about-me{
   background-color: var(--dark-background);
   height: 400px;
   margin-bottom: 75px;
-  width: 100%;
+  /* Flex */
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-left: -.2rem;
-  margin-right: -.2rem;
   align-items: center;
 }
 
@@ -110,9 +111,6 @@ p {
   /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
   margin-bottom: 1.5rem;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: flex-start; */
 }
 
 #about-me h2 {
@@ -132,16 +130,34 @@ p {
 
 #about-me #hello {
   color:white;
-  background-color:  var(--dark-background);
-  width: 300px;
+  background-color: var(--dark-background);
+  width: 280px;
   font-size: 20px;
   position: relative;
   top: 70px;
+  left: 40px;
 }
 
 #me-photo{
   height: 400px;
   width: 400px;
+  position:relative;
+  right: 20px;
+}
+
+#about-me #skills{
+  writing-mode: vertical-rl;
+  color: white;
+  border: none;
+  font-size: 60px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  width: 30px;
+  height: 400px;
+  text-align: center;
+  position: relative;
+  top: 0;
+  padding: 0;
+  margin-top: 10px;
 }
 
 #about-me p {
@@ -150,7 +166,7 @@ p {
   font-family: 'Courier New';
   font-size: 25px;
   background-color: wheat;
-  font: weight 300px;;
+  font-weight: bold;
   padding: 5px;
   width: 500px;
   position: relative;
@@ -158,8 +174,9 @@ p {
   
 }
 
-/* Projects */
-/* Header for projects section */
+/* ############################# PROJECTS SECTION ################################*/
+
+/* PROJECTS SECTION HEADER */
 #projects-header {
   color: var(--outer-space);
   font-weight: bold;
@@ -172,7 +189,7 @@ p {
   margin: auto;
 }
 
-/* Styling of first project */
+/* LEADING PROJECT*/
 .big-card-column{
   flex: 1 0 100%;
   padding: 1.5rem;
@@ -182,35 +199,44 @@ p {
 }
 
 .big-card{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  /* positioning */
+  margin:auto;
+  margin-top: 85px;
+  margin-bottom: 50px;
   min-height: 100%;
   padding: 2rem;
   height: 700px;
   width: 90%;
+  /* image setting & styling */
   background-image: url("./images/css_snippet_cheat.JPG");
   background-size: cover;
   background-position:top;
   border-radius: 25px;
-  margin:auto;
-  margin-top: 75px;
-  margin-bottom: 35px;
-
+  /* flexbox column */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
+
+/* LEAD PROJECT HEADER */
 .big-card .card-header {
+  /* using position and neg margin to move header over card */
   position: relative;
-  margin: -6rem 0 1.5rem 0;
+  margin: -8rem 0 1.5rem 0;
   padding: 0.5rem 1rem;
-  color: var(--heliotrope);
-  border: 2px solid var(--gin);
   transition: all 0.5s ease-in-out;
-  font-family: 'Courier New';
+  font-family: Arial, Helvetica, sans-serif;
   border-bottom: solid 2px rgb(134, 134, 134);
   /* border-bottom: solid 2px var(--blood-orange); */
 }
 
-/* Smaller projects */
+/* CHANGE FONT FOR SUBTEXT ON CARD HEADER */
+.big-card .card-header span{
+  font-size: 17px;
+  font-family: 'Courier New';
+}
+
+/* ALL OTHER PROJECTS */
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -219,7 +245,7 @@ p {
   justify-content: center;
 }
   
-  /* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
+/* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
 .card-column {
   flex: 1 0 100%;
   padding: 1.5rem;
@@ -228,74 +254,84 @@ p {
   margin-bottom: 1.5rem;
 }
   
-  /* make each code card a flexbox column to align and justify content within it */
-  .code-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    min-height: 100%;
-    padding: 2rem;
-    color: var(--heliotrope);
-    height: 300px;
-    border-radius: 25px;
-  }
+/* make each code card a flexbox column to align and justify content within it */
+.code-card {
+  /* positioning */
+  min-height: 100%;
+  padding: 2rem;
+  height: 300px;
+  border-radius: 25px;
+  /* flexbox column */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
-  /* Setting background images for projects */
-  .rps{
-    background-image: url("./images/rps.png");
-    background-size: cover;
-    background-position: center;
-  }
+/* CARD IMAGES */
+.rps{
+  background-image: url("./images/rps.png");
+  background-size: cover;
+  background-position: center;
+}
 
-  .type{
-    background-image: url("./images/typography.JPG");
-    background-size: cover;
-    background-position: center;
-  }
+.type{
+  background-image: url("./images/typography.JPG");
+  background-size: cover;
+  background-position: center;
+}
 
-  .firstWeb{
-    background-image: url("./images/firstWeb.JPG");
-    background-size: cover;
-    background-position: center;
-  }
+.firstWeb{
+  background-image: url("./images/firstWeb.JPG");
+  background-size: cover;
+  background-position: center;
+}
   
-  /* Header for cards */
-  .code-card .card-header {
-    position: relative;
-    margin: -6rem 0 1.5rem 0;
-    padding: 0.5rem 1rem;
-    color: var(--heliotrope);
-    border: 2px solid var(--gin);
-    transition: all 0.5s ease-in-out;
-    font-family: 'Courier New';
-    border-bottom: solid 2px rgb(134, 134, 134);
-    /* border-bottom: solid 2px var(--blood-orange); */
-  }
+/* HEADER FOR CARDS */
+.code-card .card-header {
+  /* using position and neg margin to move header over card */
+  position: relative;
+  margin: -8rem 0 1.5rem 0;
+  padding: 0.5rem 1rem;
+  transition: all 0.5s ease-in-out;
+  font-family: Arial, Helvetica, sans-serif;;
+  border-bottom: solid 2px rgb(134, 134, 134);
+  /* border-bottom: solid 2px var(--blood-orange); */
+}
 
-  /* set an outer and inner drop shadow on the card to create a glowing effect on hover */
+.code-card .card-header span{
+  /* change font for subtext on card*/
+  font-size: 17px;
+  font-family: 'Courier New';
+}
+
+/* CARD SHADOW ON HOVER */
 .code-card:hover {
   box-shadow: 10px 10px 15px var(--forest);
   cursor: pointer;
 }
+
 .big-card:hover {
   box-shadow: 10px 10px 15px var(--forest);
   cursor: pointer;
 }
+
+/* CARD SIZING */
 /* each card's code block grows to the height of the largest code block on the page, making each card even in height */
 .code-card .code-block {
   flex-grow: 1;
 }
 
-/* CONTACT ME SECTION */
+/* #############################CONTACT ME SECTION ########################################*/
+
 #contact-me {
   background-color: var(--dark-background);
   height: 350px;
+  margin-top: 45px;
+  border-bottom: 10px solid rgb(175, 175, 175);
+  /* flexbox row */
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  position: relative;
-  margin-top: 45px;
-  border-bottom: 10px solid var(--blood-orange);
 }
 
 #contact-me h2 {
@@ -313,35 +349,41 @@ p {
 }
 
 #contact-info{
-  margin-left: 5%;
+  margin-left: 13%;
   height: 250px;
   margin-top: 34px;
-  text-align: left;
+  text-align: center;
 }
 
-#contact-me p {
+#contact-me li{
   color: white;
   font-weight: bold;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-family: 'Courier New';;
   padding: 20px;
-  text-align: left;
+  display: inline-block;
+  margin-top: 75px;
 }
 
 #contact-me a{
   color: var(--outer-space);
-  background-color: rgb(168, 168, 168);
-  border-radius: 10px;
+  background-color: rgb(216, 216, 216);
+  border-radius: 5px;
   padding: 7px;
   margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;;
 }
 
+/* ############################# FOOTER SECTION ########################################*/
 footer{
   text-align: center;
   padding: 10px;
   background-color: white;
   color: var(--outer-space);
 }
+
+/* ############################# MEDIA SCREEN SIZING ########################################*/
+
 /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
 @media screen and (min-width: 768px) {
   /* on tablets, set columns to only be 50% of the width and not grow */
@@ -353,6 +395,10 @@ footer{
   /* .am-row {
     flex: 0 0 50%;
     max-width: 50%;
+  } */
+
+  /* #about-me{
+    height: 800px;
   } */
 
 
@@ -379,8 +425,12 @@ footer{
   }
 
   /* .am-row {
-    flex: 0 0 25%;
+    flex: 0 0 20%;
     max-width: 20%;
+  }
+
+  #about-me{
+    height: 800px;
   } */
 
   
