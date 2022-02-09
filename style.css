@@ -14,7 +14,7 @@
 /* ############################# STANDARD PAGE STYLE ################################*/
 
 * {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   padding: 0;
   margin: 0;
 }
@@ -66,6 +66,7 @@ p {
 /* ############################# HEADER IMAGE #########################################*/
 .main-image {
   height: 700px;
+  width: 100%;
   background-image: url("./images/bwrock.jpg");
   background-size: cover;
   background-position: center;
@@ -94,26 +95,18 @@ p {
 
                                  /* Main Content */
 /* ############################# ABOUT ME SECTION ################################*/
-
-#about-me{
+/* .about-me-card{
+  border: solid 1px black;
+  background-color: red;
+} */
+#about-me-row{
   background-color: var(--dark-background);
-  height: 400px;
-  margin-bottom: 75px;
-  /* Flex */
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
+  /* height: 400px; */
+  margin: 0px;
+  margin-bottom: 75px; 
 }
 
-.am-row{
-  flex: 1 0 100%;
-  /* when the screen resizes, make it so our columns don't jump in size */
-  transition: flex-basis 500ms linear;
-  margin-bottom: 1.5rem;
-}
-
-#about-me h2 {
+#about-me-head {
   color: white;
   font-weight: bold;
   font-size: 80px;
@@ -123,55 +116,34 @@ p {
   height: 300px;
   padding: 20px;
   text-align: left;
-  position: relative;
-  top: 50px;
-  margin-left: 20px;
 }
 
-#about-me #hello {
+#bio {
   color:white;
-  background-color: var(--dark-background);
-  width: 280px;
-  font-size: 20px;
-  position: relative;
-  top: 70px;
-  left: 40px;
+  font-size: 22px;
 }
 
 #me-photo{
   height: 400px;
   width: 400px;
-  position:relative;
-  right: 20px;
 }
 
-#about-me #skills{
+#skills-header{
   writing-mode: vertical-rl;
   color: white;
-  border: none;
   font-size: 60px;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  width: 30px;
-  height: 400px;
-  text-align: center;
-  position: relative;
-  top: 0;
-  padding: 0;
-  margin-top: 10px;
+  font-weight: 600;
 }
 
-#about-me p {
+.skills-content{
   color: var(--outer-space);
-  margin: 20px;
+  margin: 10px;
   font-family: 'Courier New';
   font-size: 25px;
   background-color: wheat;
   font-weight: bold;
   padding: 5px;
-  width: 500px;
-  position: relative;
-  top: 50px;
-  
 }
 
 /* ############################# PROJECTS SECTION ################################*/
@@ -208,7 +180,7 @@ p {
   height: 700px;
   width: 90%;
   /* image setting & styling */
-  background-image: url("./images/css_snippet_cheat.JPG");
+  background-image: url("./images/restroom-finder.JPG");
   background-size: cover;
   background-position:top;
   border-radius: 25px;
@@ -261,6 +233,7 @@ p {
   padding: 2rem;
   height: 300px;
   border-radius: 25px;
+  margin-top: 40px;
   /* flexbox column */
   display: flex;
   flex-direction: column;
@@ -269,13 +242,13 @@ p {
 
 /* CARD IMAGES */
 .rps{
-  background-image: url("./images/rps.png");
+  background-image: url("./images/workday-scheduler.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .type{
-  background-image: url("./images/typography.JPG");
+  background-image: url("./images/weather-dashboard.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -290,7 +263,8 @@ p {
 .code-card .card-header {
   /* using position and neg margin to move header over card */
   position: relative;
-  margin: -8rem 0 1.5rem 0;
+  margin-top: 10px;
+  margin: -11rem 0 1.5rem 0;
   padding: 0.5rem 1rem;
   transition: all 0.5s ease-in-out;
   font-family: Arial, Helvetica, sans-serif;;
@@ -360,7 +334,7 @@ p {
   font-weight: bold;
   font-size: 20px;
   font-family: 'Courier New';;
-  padding: 20px;
+  /* padding: 20px; */
   display: inline-block;
   margin-top: 75px;
 }
